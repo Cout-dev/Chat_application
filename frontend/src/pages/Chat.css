@@ -1,0 +1,118 @@
+body {
+  color: #f0f0f0; /* Light gray for better readability */
+  background-color:rgb(59, 41, 150); /* Dark background for the body */
+}
+
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 80px auto 50px;
+  padding: 20px;
+  background-color: #16213e; /* Dark blue background */
+  background-image: linear-gradient(315deg,rgb(40, 52, 87) 0%,rgb(15, 53, 129) 74%); /* Subtle gradient */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #f0f0f0; /* Light text for better contrast */
+}
+
+/* Chat Messages Box */
+.chat-messages {
+  border-radius: 12px;
+  padding: 15px;
+  height: 300px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient for messages */
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual Messages */
+.chat-message {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: fit-content;
+  max-width: 80%;
+  background:rgb(59, 41, 150); /* Slightly lighter gradient for individual messages */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0; /* Light text for better readability */
+  word-wrap: break-word;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Sent Messages */
+.sent {
+  align-self: flex-end;
+  background: linear-gradient(145deg, #4e4e6d, #6a6a9a); /* Darker gradient for sent messages */
+  color: white;
+}
+
+/* Received Messages */
+.received {
+  align-self: flex-start;
+  background:rgb(59, 41, 150); /* Darker gradient for received messages */
+  color: #f0f0f0; /* Light text for better readability */
+}
+
+/* Chat Input Box */
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Input Field */
+.chat-input input {
+  width: 75%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent input field */
+  color: #f0f0f0; /* Light text for better readability */
+}
+
+/* Send Button */
+.send-btn {
+  background: linear-gradient(145deg, #00b4db, #0083b0); /* Cool blue gradient for send button */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 130px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 180, 219, 0.3);
+  margin-left: 10px;
+}
+
+.send-btn:hover {
+  background: linear-gradient(145deg, #0083b0, #00b4db); /* Reverse gradient on hover */
+  transform: scale(1.05);
+  box-shadow: 3px 6px 15px rgba(0, 180, 219, 0.5);
+}
+
+/* Timestamp Styling */
+.timestamp {
+  display: block;
+  font-size: 0.8rem;
+  color: #ddd; /* Softer gray for timestamps */
+  text-align: right;
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 95%;
+    padding: 15px;
+  }
+}
